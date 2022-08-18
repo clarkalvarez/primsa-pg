@@ -1,0 +1,35 @@
+{
+  "name": "prisma-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon script.ts",
+    "deleteDB": "nodemon deletedb.ts",
+    "migrateDB": "npx prisma migrate dev --name test && npx prisma generate",
+    "deleteUpdateDB": "npx ts-node deletedb.ts && npx prisma migrate dev --name test && npx prisma generate"
+
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarkalvarez/prisma-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clarkalvarez/prisma-tutorial/issues"
+  },
+  "homepage": "https://github.com/clarkalvarez/prisma-tutorial#readme",
+  "devDependencies": {
+    "@types/node": "^18.6.4",
+    "nodemon": "^2.0.19",
+    "prisma": "^4.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.1.1"
+  }
+}
